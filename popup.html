@@ -1,0 +1,1709 @@
+<html>
+  <head>
+  	<link rel="stylesheet" href="pop.css" title ="popup_css" type="text/css"/> 
+	<link href="content/ui/dev/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css"/>
+	<link href="content/examples.css" rel="stylesheet" type="text/css"/>
+	<link href="content/ui/token-input.css" rel="stylesheet" type="text/css"/>
+	<link href="content/ui/token-input-facebook.css" rel="stylesheet" type="text/css"/>
+	<link href="content/jquery.notice.css" rel="stylesheet" type="text/css"/>
+
+	<script type="text/javascript" src="content/clickTracking.js"></script>
+	<script src="content/ui/js/jquery-1.6.2.min.js"></script>
+	<script src="content/ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+	<script src="content/ui/js/jquery-highlight-3.js"></script>
+	<script src="content/jquery.viewport.js"></script>
+	<script src="content/jquery-impromptu.3.2.js"></script>
+	<script type="text/javascript" src="content/jquery.notice.js"></script>
+  	<script type="text/javascript" src="content/jquery.watermark.min.js"></script>
+	 <script type="text/javascript" src="content/ui/jquery.tokeninput.js"></script>
+	<script type="text/javascript" src="content/ui/jquery.blockUI.js"></script>
+  </head>
+
+<body>
+
+
+<!-- SignUp Screen Starts -->
+<div id="screen_signUp" class="screen">
+     
+	 <div class="header" style="margin-top:-8px;">
+        <div style="text-align: right; margin-right: 5px; margin-top: 10px;">
+           <img id="signInButton" src="img/signin.png" style="cursor:pointer; margin-top: 10px;" />
+        </div>
+     </div>
+	
+    <div class="content" style='background: url(img/background.png); height:408px; margin-top:-2px; '>
+		
+		<div style='height:2px;'></div> <br />
+        <div align="center" class="heading"><b>Create a Flimby Account: </b></div>
+	    <div class="warning" id="warning_missing_fields" style="position:absolute; padding-left:40px;">*Required fields are missing        </div> <br />
+		
+        <div class="formControls">
+           <span class="greyLabel" style='font-size:12px; padding-left:5px; font-weight: bold;'> Choose your unique Flimby ID:</span>
+           <input type="text" id="signUpCoVuID" style=" background: url(img/covu_input.png); width: 245px; height: 24px; padding:0 0 0 100px; margin-top: 3px; border:none; "/>
+
+            <div style="height: 15px; text-align: center;">
+			   
+			   <div class="notify" id="warning_wait">Check Availabilty <img src="img/spinny_wait.gif"/></div>
+			   
+			   <div class="warning" id="warning_allowCharacters" style="text-align: left;">Allowed characters: "a-z" "0-9" "_" "-"               </div>
+			   
+			   <div class="warning" id="warning_allowCharacters1" style="text-align: left;">First and Last character must be     	               alphanumeric       </div>
+			   
+			   <div class="warning" id="warning_lengthCharacters" style="text-align: left;">Your ID must be 3 to 32 characters long               </div>
+			   
+			   <div class="warning" id="warning_notAvailable">ID not available</div>
+			   
+			   
+           </div>
+			
+              <input type="text" id="signUpFirstName" placeholder=" First Name" style=" background: url(img/input.png); width:    	245px; height: 24px; border: 1px;  margin-top: 5px; " /><br />
+              
+			  <div style="height: 15px;">           
+				   
+				   <div class="warning" id="warning_first_name">Please enter your First Name</div>
+				   
+			   </div>
+			   
+			  <input type="text" id="signUpLastName" placeholder=" Last Name" style=" background: url(img/input.png); width: 245px; height: 24px; border: none; margin-top: 5px;" /><br />
+               
+			   <div style="height: 15px;"> 
+			        <div class="warning" id="warning_last_name">Please enter your Last Name</div>             
+			   </div>
+			   
+               <input type="text" id="signUpEmail" placeholder=" Email" style=" background: url(img/input.png); width: 245px;     	height: 24px; border: none; margin-top: 5px;" /><br />
+               
+			   <div style="height: 15px;"> 
+			        <div class="warning" id="warning_email_address">Enter your Email Address</div>            
+			   </div>
+           
+			   <input type="password" id="signUpPassword" placeholder=" Password" style=" background: url(img/input.png); width: 245px; height: 24px; border: none; margin-top: 5px;" /><br />        
+			   
+			   <div style="height: 15px;"> 			 
+			        <div class="warning" id="warning_password">Password Length: 6 to 32 charachters</div>
+			   </div>
+			   
+               <input type="password" id="signUpConfirmPassword" placeholder=" Confirm Password" style=" background:  		   			url(img/input.png); width: 245px; height: 24px; border: none; margin-top: 5px;" />
+			   
+			   <div style="height: 15px;"> 
+			       
+				   <div class="warning" id="warning_confirm_password">Password does not match</div>
+			       <div class="warning" id="warning_lengthPassword">Password Length: 6 to 32 charachters</div>
+				   
+			  </div>
+			  
+       </div>  <!-- Form Div Closed -->
+		
+               <center><img id="signUpSubmit" src="img/button_signup.png" style="cursor:pointer;" /> </center>
+   </div>  <!-- Content Div Closed -->
+	
+<!--		<div class="blackLabelS" style="text-align: right;" id="versionInfo">v1.0.0.359</div> -->
+             <div class="footer"></div>
+             <div class="blackLabelS" style="text-align: right;" name="versionInfo">Stage v1.0.51</div>
+</div> <!-- Sign-up Main Div Closed -->
+<!-- SignUp Screen Ends-->
+
+<!-- Welcome Screen Starts -->
+
+<div id="welcome-screen" style='position: relative; width: 320px; height: 490px; display:none;'>
+ 
+ <div id="header" class="header">
+      <img  src='img/welcome_logo.png' style='position: absolute; top: 3px; left:122px; width: 76px;height:45px' />
+ </div> <!-- Header Ends -->
+ 
+ <div id="content" style="width:320px;">
+ 	<img  src='img/welcome_background.png' style='position: absolute; top: 51px; left:0px; width: 320px;height:429px' />
+	<img  src='img/welcome-text1.png' style='position: absolute; top: 90px; left:89px; width: 142px;height:21px' />
+	<img  src='img/welcome-text2.png' style='position: absolute; top: 121px; left:22px; width: 276px;height:58px' />
+	<img id="LaunchBtn"  src='img/welcome_launch_button.png' style='position: absolute; cursor:pointer; top: 310px; left:93px; width: 135px;height:131px' />
+ </div> <!-- Content Ends -->
+<div class="blackLabelS" style="text-align: right; position:absolute; top:480px; left:287px;" name="versionInfo">Stage v1.0.51</div>
+</div> <!-- Main Div ends -->
+
+
+<!-- Welcome Screen Ends -->
+
+<!-- SignIn Screen Starts -->
+<div id="screen_signIn" class="screen_main" >
+    
+	<div class="header" style="margin-top:-8px;">
+        
+		<div style="text-align: right; margin-right: 5px; margin-top: 10px;">
+            <img id="signUpButton" src="img/signup.png" style="cursor:pointer; margin-top: 10px;"/>
+        </div>
+		
+    </div>
+	
+	<div class="content" style='background: url(img/background.png); height:408px; margin-top:-2px;'>
+		
+		<div style='height:2px;'></div>
+        <div align="center" class="heading" style='margin:30px;'><b>Sign In To Your Flimby Account:</b></div>
+        
+		<div class="formControls">
+		<div style="margin-left:-8px; display:none;"><img src="img/text_signin_using.png" /></div>
+		     <div id="gigya" style="cursor:pointer; display:none; width:257px; height:74px; margin-top:3px; background: url(img/gigya.jpg);" onClick="launchApp();">
+
+			 </div>
+		<div style="margin-left:-8px; margin-bottom:5px; display:none;"><img src="img/text_signin_covuid.png" />	 </div>
+			 <span id='login_warning' class='warning'></span>
+             
+			 <span  style='font-size:12px; padding-left:5px; font-weight: bold;' class="greyLabel"> Enter your Flimby ID:</span>
+			 
+			 <input type="text" id="signInCoVuID" style="outline: none; background: url(img/covu_input.png); width: 245px; height:24px; padding:0 0 0 100px; border:none; "/>
+			 
+			 <br /><br />
+             
+			 <span style='font-size:12px; padding-left:5px; font-weight: bold;'  class="greyLabel"> Password:</span>
+
+             <input type="password" id="signInPassword"  style="outline: none; background: url(img/input.png); width: 245px; height:24px; border: none;" />
+			 
+			 <br /><br />
+			 
+			 <input type=CHECKBOX id="remember_password" >
+
+			 <label for="remember_password" style='position:absolute; font-size:12px; font-weight: bold; margin-top:3px;padding-left: 5px;' class="greyLabel"> Save Password </label>
+
+	   </div> <!-- Form Div Closed -->
+       
+	  
+       <center>
+	    
+	      <img id="signInSubmit" style="cursor:pointer; margin-top: 25px;" src="img/button_orange_submit.png" />
+	   </center>
+		
+	   <center>
+	      <img src='img/line.png'style="width: 80%; color: #DDDDDD; margin-top: 10px; margin-bottom: 5px;" />
+	   </center>
+          
+	   <div style="text-align: center; margin-top: 10px;">
+            
+			<span id="forgotPass" class="greyLabel" style="font-size: 12px; text-decoration: underline; cursor:pointer; "> Forgot your Flimby ID or Password?</span><br />
+			
+             <div id="forgotPassword" style="display: none; margin-top: 10px;">
+            
+			      <input id="forgotPasswordEmail" style="outline: none; background: url(img/input.png); width: 245px; height:24px; border: none;" type="text" size="30" placeholder=" Enter Your Email Address ..."  /><br />
+                  
+				  <img id="forgotPasswordSubmit" style="cursor:pointer; margin-top: 10px;" src="img/submit.png"/><br />
+                   
+				   <div id="requestSentConfirm" style="font-size: 12px; font-weight: bold; display: none;"><br />
+                      Your request has been submitted, <br /> please check your email.
+                   </div>
+				   
+             </div>
+        </div> 
+   </div> <!-- Content Div Closed -->
+   
+     <div class="footer" style="margin-top:0px;"></div>
+     <div class="blackLabelS" style="text-align: right;" name="versionInfo">Stage v1.0.51</div>
+</div>  
+<!-- SignIn Screen Closed -->
+
+<!-- Waiting Screen Starts -->
+<div id="screen_wait" class="screen_main" >
+		<div class="header" style="margin-top:2px;"></div>
+		
+		<div class="content" style='background: url(img/background.png); margin-top:-2px; 	height: 408px;' align="center">   
+				<div style='height:2px;'></div>
+				<br />
+				<br />
+				
+				<div> <img  src="img/spinny.gif"  style='padding-top:50px;' /> </div>
+		</div>
+		
+		<div class="footer" ></div>
+		   <div class="blackLabelS" style="text-align: right;" name="versionInfo">Stage v1.0.51</div>
+</div>
+<!-- Waiting Screen Ends -->
+		
+<!-- Home Screen Starts -->
+<div id="screen_main" class="screen_main">
+
+ 	<!-- new memeber help popup -->
+ 	<div id="new_member_help" class="new_member_popup_rocket">
+ 		<!-- page one of the help pages -->
+ 		<div id="help_page_1" style="display:none;">
+ 			<div id="header_area" style="margin: 126px 46px -13px; height: 100px; width: 300px; color:grey;">
+ 				<button id="helpQuitBtn" class="new_member_quit_button" style=" margin:-92px 0 0 252px;" ></button>
+ 				<h2 style="margin: -71px auto 5px auto; position: absolute;">Welcome to</h2> <img src="img/popup_cloud.png" style="display:inline; position: absolute; margin: -92px 134px;"/><h1 style="position: absolute; margin: -76px 243px;">!</h1>
+				
+ 				<span style="font-size: 12px; position: absolute; margin: -36px 0; display: inline; color:black;">Your all-in-one Social Toolbox.</span>
+				
+ 			</div>
+ 			<div id="help_body" style="margin: 0 42px 0 59px; font-size: 12px;">
+ 				<h3 style="text-align: center;">Click "Start" to initiate<br/> the countdown!</h3>
+ 				
+				<button id="helpStrtBtn" style="background: url(img/start.png) no-repeat; cursor: pointer; display: block; width:155px; height: 53px; border: none; margin: -10px auto 0;"></button>
+				
+ 			</div>
+ 			<div id="footer_area" style="font-size: 15px; margin: -15px auto 0 58px;">
+ 				<p>Tip:Click "Start" or swipe to continue...</p>
+ 				<img src="img/radio_1.png" alt="radio button 1" style="margin: -8px auto 0 76px;" />
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<div id="new_member_help_finish" class="new_member_popup">
+ 		<!-- page two of the help pages -->
+ 		<div id="help_page_2" style="display:none;">
+ 			<div id="header_area_page2" style="margin: -12px 43px; text-align: center;">
+ 				<button id="helpQuitBtn2" class="new_member_quit_button"></button>
+ 				<h2 style="margin: 48px auto 5px auto; font-style: italic; color: #73C7E7; ">COUNTDOWN:</h2>
+ 				<img src="img/help_number_3.png" alt="the number 3" style="margin: -10px auto 0 17px;"/>
+ 			</div>
+ 			<div id="help_body_page2" style="margin: 0 42px 0 57px; font-size: 12px;">
+ 				<h3 style="margin: 26px 0 11px; text-align: center;">Connect with</h3>
+ 				<img src="img/popup_people_icon.png" alt="people icon"  />
+ 				<p style="text-align: center; margin-top:-48px;">and</p>
+ 				<img src="img/popup_groups_icon.png" alt="groups icon" style="margin: -63px 0 0 155px;" />
+ 				<span class="help_text_under_icons" style="margin-left: 21px; color: grey;">People</span>
+ 				<span class="help_text_under_icons" style="margin-left: 115px; color: grey;">Groups</span>
+ 			</div>
+ 			<div id="footer_area_page2" style="margin:10px;">
+ 				<span style="font-size: 14px; text-align: center; margin: 0 0 0 23px; display: block;">Tip:Search for their Flimby ID, or click "Invite" to send an email</span>
+ 				<button id="helpBackBtn" class="new_member_back_button"></button>
+ 				<img src="img/radio_2.png" alt="screen selected number 2" style="margin: 16px 0 0 117px;"/>
+ 				<button id="helpNxtBtn" class="new_member_next_button"></button>
+ 			</div>		
+ 		</div>
+ 		<!-- page three of the help pages -->
+ 		<div id="help_page_3" style="display:none;">
+ 			
+			<div id="header_area_page2" style="margin: -12px 43px; text-align: center;">
+ 				<button id="helpQuitBtn3" class="new_member_quit_button"></button>
+ 				<h2 style="margin: 48px auto 5px auto; font-style: italic; color: #73C7E7; ">COUNTDOWN:</h2>
+ 				<img src="img/help_number_2.png" alt="the number 3" style="margin: -10px auto 0 17px;"/>
+ 			</div>
+			
+ 			<div id="help_body_page3" style="margin: -21px 15px 0 44px; font-size: 12px;">
+ 				<h3 style="margin: 26px 0 11px -19px; text-align: center;">Blast messages, bookmarks and more!</h3>
+ 				<img src="img/320x480_covu_button.png" style="margin: 16px auto 16px 90px;" alt="blast button" />
+ 			</div>
+			
+ 			<div id="footer_area_page3" style="margin:10px;">
+ 			
+				<span style="font-size: 14px; text-align: center; margin: -10px 0 11px 23px; display: block;">Tip:In the "To:" field, use their Flimby ID</span>
+				
+ 				<button id="helpBackBtn2" class="new_member_back_button" style=""></button>
+ 				<img src="img/radio_3.png" alt="screen selected number 3" style="margin: 15px 0 0 117px;"/>
+ 				<button id="helpNxtBtn2" class="new_member_next_button"></button>
+ 			</div>
+ 		</div>
+ 		<!-- page four of the help pages -->
+ 		 <div id="help_page_4" style="display:none;">
+ 			
+			<div id="header_area_page4" style="margin: -12px 43px; text-align: center;">
+ 				<button id="helpQuitBtn4" class="new_member_quit_button"></button>
+ 				<h2 style="margin: 48px auto 5px auto; font-style: italic; color: #73C7E7; ">COUNTDOWN:</h2>
+ 				<img src="img/help_number_1.png" alt="the number 1" style="margin: -10px auto 0 17px;"/>
+ 			</div>
+			
+ 			<div id="help_body_page4" style="margin: 0 42px; font-size: 12px;">
+ 				
+				<h3 style="margin: 16px 0 37px 15px; text-align: center;">Stay connected with the Stream</h3>
+ 				<img src="img/popup_stream_icon.png" style="margin: -26px auto 13px 89px;" alt="stream icon" />
+ 				<span style="font-size: 15px; color: grey; margin: 0 0 10px -67px;">Stream</span>
+				
+ 			</div>
+ 			<div id="footer_area_page4" style="margin:14px 10px;">
+ 				
+				<span style="font-size: 14px; text-align: center; margin: -1px 0 5px 23px; display: block;">Tip: Click on a Blast to view the Conversation. ReBlast it too!</span>
+ 				<button id="helpNxtBtn3" class="new_member_back_button" style="" ></button>
+ 				<img src="img/radio_4.png" alt="screen selected number 4" style="margin: 16px 0 0 118px;" />
+ 				<button id="helpNxtBtn4" class="new_member_next_button" ></button>
+				
+ 			</div>
+ 		</div>
+ 		<!-- page five of the help pages -->
+ 		 <div id="help_page_5" style="display:none;">
+ 			<div id="header_area_page5" style="margin: -20px 42px 10px; width: 300px;">
+ 				
+				<button id="helpQuitBtn5" class="new_member_quit_button" style="margin-top: -19px; margin-left: 256px;"></button>
+				
+ 				<h3 style="margin: 73px auto 16px 10px; font-style: italic; color: #73C7E7; ">READY FOR BLAST OFF!</h3>
+ 				<span style="margin: 0 10px 10px 16px;">Click on "Launch" to get started</span>
+				
+ 			</div>
+ 			<div id="help_body_page5" style="margin: 0 42px; font-size: 12px;">
+ 				
+				<img id="launchButton" src="img/popup_launch_button.png"  style="margin: 0 auto 19px 69px; cursor: pointer;" alt="Launch icon" />
+				
+ 			</div>
+ 			<div id="footer_area_page5" style="width: 300px; margin-left: 17px;">
+ 				
+				<span style="margin: 10px auto 6px 14px; text-align: center; display: block; font-size: 14px;">Tip: Click on "Help" in the Home Screen if you have any more questions.</span>
+				
+ 				<button id="helpBackBtn3" class="new_member_back_button" style="margin: 14px 0 0 28px;"></button>
+ 				<img src="img/radio_5.png" style="margin: 15px 0 0 111px;" alt="screen selected number 5" />
+ 				
+				<button id="PopupHelpIcn" style="background: url(img/popup_help_icon.png)no-repeat; display: block; position: absolute; cursor:pointer; width: 49px; border: none; height: 43px; margin: -54px 0 0 245px;" ></button>
+				
+ 				<span style="font-size: 9px; margin: 0 0 0 44px;">Help</span>
+ 			</div>
+ 		</div>
+ 	</div>
+
+
+<!-- Conversation Page Starts -->
+
+<div id="conversation" style="display:none">
+	 <div class="streamHeader" id="streamHeader">  
+		  <div style="text-align: right; margin-right: 2px; margin-top: 2px;">
+			   
+			   <div style="position:absolute;  margin-top:13px; margin-left: 100px;">
+			   <span style="color: white; font-size: 20px; font-family:arial;font-weight: bold;">Conversation</span>	
+		       </div>	
+
+			   <div id="onConversationButton" style="position:absolute; margin-top: 10px; cursor: pointer;">
+			     
+				 <span style="position:absolute; float:left; margin-left: -52px; margin-top: 7px; color: white; font-size: 13px; font-family:arial;font-weight: bold;">Stream </span>
+			    
+				 <img style=" float:left; margin-left:6px; cursor: pointer;" src="img/back-button.png" />
+				 
+			   </div>
+			   
+			   <img src="img/friends_icon.png" title='people in this blast' id='whoImage' style="margin-top:10px; cursor:pointer; margin-right:5px;" ></img>
+			   
+			   <div id="whoList" style=" position: absolute;  right: -20px; top: 58px; height: 132px; width: 171px; display: none;z-index: 999997;">
+				    <div style="background-image: url(img/who_list.png); width: 134px; height: 132px;">
+						<!--img src="img/close_dropdown.png" style="cursor:pointer; position: absolute; top: 216px; right; " onclick="toogleAddMedia();" /-->
+				
+				         <div id="whoListID" style=" position: absolute;  width: 134px; height: 132px; overflow-y:scroll; overflow-x:none;" >
+				         </div>
+				    </div>
+			   </div>
+		 </div>
+    </div> <!-- header ends -->
+		
+	<div class="content" style="background: url(img/background.png); height:407px;">
+		
+		<div style='height:2px;'></div>
+		<div  style="border : solid 1px rgb(200, 200, 200); width: 300px; height: 392px; margin-top : 5px; margin-left : 8px;">
+			
+			<div id="coversationListingContainer" style="height: 340px; width: 310px;  overflow-x:hidden; overflow-y:auto;  text-align: center;  padding-left:0px; ">
+			
+				<img style='align:center; margin-top: 60px;' src='img/spinny.gif'/>
+			</div>
+			
+					<div style="float:right;">
+          					<img id='replyButton' src="img/button-send.png" style='cursor: pointer; margin-top:3px; margin-bottom:0px; margin-left:2px; margin-right: 8px;'/> 
+          			</div>
+          
+		              <!-- <div class="demo" style="border:1px solid #ff0000; position:absolute; top:350; left:22;">-->
+<!--<div class="other" style="border:1px solid; #ff0000; width:235px; height:45px; position: relative; margin-top: 3px; padding-left:4px; ">	
+<div id="resizable" class="resizable" style="overflow: hidden;  max-height:331px;  position:absolute; bottom:0 ; border:1px solid; -webkit-border-radius:10px;">
+	
+</div>
+ </div>-->
+ 
+<!-- <div id="hycucdemosbody">-->
+	<div id="wrapper" style="position:relative;">
+	
+		<textarea name="txtarea" placeholder=" Add a comment..." id="blastReply" style="overflow: auto; width: 250px; padding:3px; height: 47px; max-height:331px; min-height:47px;  resize: none;  border: solid 1px ; background: #fff; position: absolute; bottom:-48; left:7; -webkit-border-radius:7px; outline:none;"></textarea>
+		<!--</div>-->
+</div>
+ 
+ 
+<!--</div><!-- End demo -->
+		          
+          			<!--<div style="width:235px; height:45px; position: relative; margin-top: 3px; padding-left:4px; ">
+     
+           				<!--<textarea id='blastReply' placeholder=" Add a comment..."  style="overflow: auto;  cursor:n-resize; width: 230px; padding:3px; height: 42px; max-height:331px; min-height:42px; resize: vertical; -webkit-resize: vertical; border: solid 1px ; background: #fff; position: absolute; bottom: 0;" ></textarea>
+
+         			 </div>-->
+<!--
+			<div id="conversation_reply" style=" height:51px; width:291px; margin-left:5px; margin-top:0px;">
+				
+				<textarea id='blastReply' style="padding: .1em;" onchange ='saveReply();'  onfocus='saveReply();' placeholder=" Add a comment..." ></textarea>
+				
+				<a href="#" id='replyButton' style="background: url(img/button_send.png) no-repeat; display: block; float: right; text-decoration: none; text-align: center; cursor: pointer; width:48px; height: 21px; margin-left:-61px; margin-top: 3px; color: white;" onclick='onReplyBlast();'>Send</a>			
+				
+			</div>!-->
+		</div>
+	</div> <!-- Content Area Ends -->   
+</div>
+<!-- Conversation Page Ends -->
+	
+<!-- Home Screen Main Page Starts -->
+<div id="screen_default">
+	 
+	 <div class="header" id="homeHeader" style="display:block;">    
+         <div style="text-align: right; margin-right: 2px; margin-top: 2px; width:120px; word-wrap: break-word; text-overflow:ellipsis; overflow:hidden;white-space:nowrap;">
+		        <table align="left" style='margin-top: 30px;'>
+
+				<tr>
+					<td>
+					 <span id="myCoVuID" class="blackLabel" align="left" style="font-size: 16px; font-weight: bold; width: 111px; text-overflow: ellipsis; overflow: hidden; display: inline-block; white-space: nowrap;  margin-left: 10px;"></span> 	
+				    </td>
+				</tr>
+            </table>  
+        </div>
+	</div>  <!-- Header closed -->
+	
+	<div class="content" >
+        <div id="defaultSearch" style="background: url(img/conversation_bk.png); width: 320px; height: 32px; position: absolute; margin-top:-1px;">
+             
+			 <div>
+				 <div style=" width:274px; height: 24px; z-index: 999999; position: absolute; right: 35px; top: 3px; background: url('img/full_search_field.png'); background-size: 274px 24px;">
+				 
+							<img src="img/history.png" style="cursor:pointer; display: block; z-index: 999998; position: absolute; right: 4px; top: 2px;" id="SearchHistory"></img>
+							
+							<input id="searchKeywords"  type="text" style="z-index: 999997; position: absolute; top: 2px; right: 65px; border:none; width: 204px; outline: none;" />
+							
+						    <img src="img/search_magnify_button.png"  id="default_screen_searchSubmit" style="cursor: pointer; margin-left: 281px; width: 20px; height: 20px; margin-top:2px; top: 20px;"/>                  
+							
+				</div>
+					
+	<!-- drop down box for seeing your most recent search history -->
+				<div id="recentHistory" style=" position: absolute;  right: 78px; top: 4px; height: 240px; width: 199px; display: none;z-index: 999997;">
+					<div id="background"style="background-image: url(img/recent_dropdown_bk.png); width: 237px; height: 240px;">
+						<!--img src="img/close_dropdown.png" style="cursor:pointer; position: absolute; top: 216px; right; " onclick="toogleAddMedia();" /-->
+					</div>
+					<div id="recentResults" style=" position: absolute; top: 30px; width: 237px; height: 188px; overflow-y:scroll; overflow-x:none;" >
+					</div>
+				</div>
+				
+				<div style='background: url(img/background.png);height: 377px;position: relative;margin-top: 30;'>
+					<img id="streamBtn" src="img/stream.png"  style="position:absolute; margin-top:28px; margin-left:30px; width: 58px height: 73px; cursor: pointer;"/>
+					<div id="blast_notifications" style="position: absolute; float:top; margin-left: 95px; margin-top: 24px; display:none;">
+					<img src="img/notification_bubble.png"  style="position: absolute; float:top; margin-left: -21px; margin-top: -10px;"/>
+					<span id='blast_alerts' class='notification-single' style=''>0</span>
+				</div>
+					<img id="peopleBtn" src="img/home-icon-people.png"  style="position:absolute; margin-top:28px; margin-left:131px;  width: 58px height: 73px; cursor: pointer; "/>	
+						
+				<div id="people_notifications" style="position: absolute; float:top; margin-left: 195px; margin-top: 25px; display:none;">
+					<img src="img/notification_bubble.png"  style="position: absolute; float:top; margin-left: -21px; margin-top: -10px;"/>
+							<span id='people_alerts' class='notification-single' style=''>0</span>
+						</div>
+						
+						<img id="groupBtn" src="img/home-icon-groups.png"  style="position:absolute; margin-top:28px; margin-left:232px;  width: 58px height: 73px; cursor: pointer; "/>	
+
+
+
+						<img id="profileBtn" src="img/home-icon-profile.png"  style="position:absolute; margin-top:155px; margin-left:30px;  width: 58px height: 73px; cursor: pointer;"/>
+						<img id="CoVuBtn" src="img/320x480_covu_button.png"  style="position:absolute; margin-top:140px; margin-left:116px;  width: 89px height: 90px; cursor: pointer;"/>
+                        <img id="CoVuTxt" src="img/320x480_covu_button_text.png" style=" position:absolute; top:232px; left:138px;cursor:pointer; "/>	
+						<img id="shareBtn" src="img/home-icon-share.png" title="Coming Soon"  style="position:absolute; margin-top:155px; margin-left:232px;  width: 62px height: 75px; cursor: pointer; "/>	
+
+
+						<img id="dashBtn" src="img/home-icon-dashboard.png"  style="position:absolute; margin-top:282px; margin-left:30px;  width: 58px height: 73px; cursor: pointer;"/>
+						<img id="configBtn" src="img/home-icon-settings.png"  style="position:absolute; margin-top:282px; margin-left:131px; width: 58px height: 73px; cursor: pointer; "/>	
+						<img id="helpBtn" src="img/home-icon-help.png" style="position:absolute; margin-top:282px; margin-left:232px;  width: 58px height: 73px; cursor: pointer;"/>	
+				</div>
+            </div>
+       </div>
+	</div>
+</div>
+<!-- Home Screen Main Page end -->
+
+<!-- Stream Page Starts -->
+<div id="screen_home" style="display:none">
+	<div class="streamHeader" id="streamHeader" style="margin-top:0px; height:52px; background-size: 320px 52px;">  
+		<div style="text-align: right; margin-right: 2px; margin-top: 2px;">
+			<div style="position:absolute;  margin-top:13px; margin-left: 120px;">
+				<span style="color: white; font-size: 20px; font-family:arial;font-weight: bold; cursor: default;">Stream</span>	
+		    </div>	 
+        </div>
+    </div>  <!-- header closed -->
+	
+	<div class="content" style="height:406px; margin-top:0px;" >
+        <!--lead -->
+       
+        <!-- search box -->
+        <div id="homeSearch" style="background-image: url(img/conversation_bk.png);  width: 320px; height: 32px; position: relative;">
+         <div>
+             <table width="95%" align="center"style= "position: relative;">
+                <tr>
+                    <td>
+					    <div style=" width: 179px;">
+					       <img src='img/search_refresh.png' id="SearchFilter" style="height: 24px; width: 37px; cursor: pointer;"/>
+					       <div style=" width:239px; height: 24px; z-index: 999999; position: absolute; right: 27px; top: 3px; background: url('img/search_field.png'); background-size: 239px 24px;">
+					          <img src="img/history.png" style="cursor:pointer; display: block; z-index: 999998; position: absolute; right: 4px; top: 2px;" id="SearchHistory"></img>
+					          <input id="stream_searchKeywords"  type="text" style="z-index: 999997; position: absolute; top: 2px; right: 33px; border:none; width: 204px; outline: none;"  /> 
+					       </div>
+					   </div>
+			      </td>
+				    
+                  <td style="padding-left: 20px; padding-top: 0px;">
+					 <img src="img/search_magnify_button.png"  id="searchSubmit" style="cursor: pointer;  width: 20px; height: 20px; position:absolute; margin-left:-7px; margin-top:-9px; " />
+				  </td>                    
+              </tr>
+          </table>
+					
+	<!-- drop down box for seeing your most recent search history -->
+				<div id="stream_recentHistory" style="position: absolute; right: 75px; top: 3px; height: 240px; width: 199px; display: none;z-index: 999997;">
+					<div id="background"style="background-image: url(img/recent_dropdown_bk.png); width: 237px; height: 240px;">
+						<!--img src="img/close_dropdown.png" style="cursor:pointer; position: absolute; top: 216px; right; " onclick="toogleAddMedia();" /-->
+					</div>
+					<div id="stream_recentResults" style=" position: absolute; top: 30px; width: 237px; height: 188px; overflow-y:scroll; overflow-x:none;" >
+					</div>
+				</div>
+            </div>
+        </div>
+		
+			<div style='background : url(img/background.png); height:374px;'>
+		 <div id="leadContainer">
+
+            <!-- lead info. box -->
+            <div id="leadInfoBox" style="display: none; padding-left:5px; padding-top:4px;">
+                <div style="background-image: url(img/leadHeader2.png); background-size: 306px; height: 38px; width: 306px; text-align: right;">
+                    <img id='leadSessionStopButton' src="img/leadStop.png"  style="margin-top: 6px; margin-right: 10px; cursor: pointer;" />
+                </div>
+			
+               <div style="background-image: url(img/leadInfoBK.png); background-repeat: repeat-y; background-size: 306px; width: 306px;">
+                    <div style="padding-left: 17px; padding-right: 15px; " >
+					<div class='live_session_name'>
+                        <span id="leadInfoSessionName" style=" font-size: 17px;" >Session Name</span>
+					</div>
+                        <div style="padding-left: 185px;">
+                            <table id="followerList" class="greyLabel" style="cursor: pointer;">
+                                <tr>
+                                    <td><img id="leadInfoFollowArrow" src="img/arrow.png" /></td>
+                                    <td valign="middle">
+                                       
+                                        <span>Followers: </span>
+                                        <span id="leadInfoFollowCount" style="cursor: pointer;">0</span>
+                                     
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+					 <div id="leadInfoFollowerList" style="display: none;">
+
+                    </div>
+                </div>
+                    <!-- lead footer -->
+            		<div style=" background-image: url(img/leadFooter.png); background-size: 306px;; width: 306px; height: 16px; font-size: 0px;"></div>
+           		<!-- 	<div style="background-image: url(img/line.png);  width:93%; height: 2px; font-size: 0px; margin-left:1px;"></div> -->
+				    </div>
+             </div>
+		  <div style='height: 2px;'></div>
+          <div id="searchListingContainer"   class='mousescroll' style="height: 400px; max-height:370px; width: 316px; overflow-x:hidden;  text-align: center;" ><img id='stream_loader' style='align:center; margin-top: 60px;' src='img/spinny.gif'/>           </div>		
+			
+			<!--<div id="searchListing0" class="searchListing">
+			</div> -->
+		 </div>
+	</div>
+</div>
+
+<!-- Stream Page Ends -->	
+	
+	<div class="content" id="settings_page" style="display: none;  height: 457px;">
+		<div class="content" id="settingsx_page" style="display: none;  height: 457px;">
+			<iframe id="settings_content"  src="" onchange="checkIframe()" width="100%" height="100%" frameborder="0">
+			</iframe>
+		</div>
+
+<!-- People Page Starts -->		
+<div class="content" id="people_page" style="display: none;  height: 457px; " >
+	<iframe id="people_content" class="loading" style='display:none;' src="" width="100%" height="100%" frameborder="0">
+	</iframe>
+				
+		<div class="streamHeader" style="margin-top:1px;" >	
+	<div align="center" style="padding-top:14px; width:320px; height:50px; color:#FFFFFF; font-size:19px; font-weight:bold;">People</div>
+	<div id="search_back" class="search_back_button" style="display:none; cursor:pointer; margin-top: -8px; margin-left:-10px;"> 
+	  <div style="margin-left:18px; margin-top:7px; font-size:14px;">People</div> 
+	</div>
+		</div>  
+		
+		        <!-- search box -->
+        <div id="peopleSearch" style="background-image: url(img/conversation_bk.png); width: 320px; height: 32px; position: relative;">
+         <div>
+             <table width="95%" align="center"style= "position: relative;">
+                <tr>
+                    <td>
+					    <div style=" width: 179px;">
+					      <!-- <img src='img/search_refresh.png' style="height: 24px; width: 37px; cursor: pointer;" />-->
+					       <div style=" width:272px; height: 24px; z-index: 999999; position: absolute;  top: 3px; background: url('img/full_search_field.png'); background-size: 272px 24px;">
+					          <img src="img/history.png" style="cursor:pointer; display: block; z-index: 999998; position: absolute; right: 4px; top: 2px; " ></img>
+					          <input type="text" placeholder="Search for People"  id='search_people' style="z-index: 999997; position: absolute; top:1px;  right:35px; border:none; width: 228px; outline: none;" /> 
+					       </div>
+					   </div>
+			      </td>
+				    
+                  <td style="padding-left: 20px; padding-top: 12px;">
+					 <img src="img/search_magnify_button.png" id='serach_for_pople_results_button'  style="cursor: pointer;  width: 20px; height: 20px; position:absolute; margin-left:-7px; margin-top:-9px; " />
+				  </td>                    
+              </tr>
+          </table>
+					
+	<!-- drop down box for seeing your most recent search history -->
+				<div  style="position: absolute; right: 75px; top: 3px; height: 240px; width: 199px; display: none;z-index: 999997;">
+					<div id="background"style="background-image: url(img/recent_dropdown_bk.png); width: 237px; height: 240px;">
+					
+						<!--img src="img/close_dropdown.png" style="cursor:pointer; position: absolute; top: 216px; right; " onclick="toogleAddMedia();" /-->
+					</div>
+					<div style=" position: absolute; top: 30px; width: 237px; height: 188px; overflow-y:scroll; overflow-x:none;" >
+					</div>
+				</div>
+            </div>
+        </div>
+		
+	 <!-- search box End -->
+	 <div class="ui-row-default spaced" id="my_friend" style='display:none;'>
+		<div class="ui-row-content with_btn">
+			<a href="#" class="primary-link l2"> <img name='avatar' alt="Avatar" class="main" src="http://profiles.covucdn.s3.amazonaws.com/44454641554c54/avatar.png?1328783773"> <span>Name: </span><span class='people_name' value=''></span></span> <br><span>Flimby ID: </span><span class='people_name' >ajnabi1</span></span> </a>
+			<div class="content-right">
+				<a href="#" attrib='' class="button-gray"  style="margin-left:20px;">Remove</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="ui-row-default spaced" id="my_sent_requests" style='display:none'>
+		<div class="ui-row-content with_btn">
+			<a href="#" class="primary-link l2" > <img alt="Avatar" class="main" src="http://profiles.covucdn.s3.amazonaws.com/44454641554c54/avatar.png?1328783772"> <span>Name: </span><span class='people_name' value=''></span> <br><span>Flimby ID: </span><span class='people_name' value=''></span></a>
+			<div class="content-right">
+				<a href="#" class="button-gray" style="margin-left:20px;">Cancel</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="ui-row-default spaced" id="my_requests" style='display:none'>
+		<div class="ui-row-content with_btn">
+			<a href="#" class="primary-link l2" > <img alt="Avatar" class="main" src="http://profiles.covucdn.s3.amazonaws.com/44454641554c54/avatar.png?1328783772"> <span>Name: </span><span class='people_name' value=''></span> <br><span>Flimby ID: </span><span class='people_name' value=''></span></a>
+			<div class="content-right">
+				<a href="#" ><img  src="img/yes_button.png" class='accept_friendship' style="margin-top:-6px;" /></a>
+				<a href="#" ><img src="img/no_button.png" class='accept_friendship' style="margin-left:-3px; margin-top:-6px;"/></a>
+			</div>
+		</div>
+	</div>
+	 <!-- Content Area Starts-->
+	 <!--<div id="content-container-peoplemain"  onScroll='peopleController.searchMore();' class="constrain-371 search-incl" style="float:left; background: url(img/background.png); width:320px; height:376px; margin-top:0px; overflow-x: hidden; overflow-y: auto; ">
+				<div id="content-body-people-mainpage" class="reset-container" style="-webkit-transition-property: -webkit-transform; -webkit-transform-origin-x: 0px; -webkit-transform-origin-y: 0px; -webkit-transform: translate3d(0px, 0px, 0px); -webkit-transition-duration: 0ms; width:297px; height:345px; margin-left:9px; margin-top:10px;">-->
+				<!--content-containergroup
+				content-body-grouppage-->
+	<div id="content-container-peoplemain"  class="constrain-371 search-incl" style="float:left; background: url(img/background.png); height:376px; margin-bottom:0px; width:320px; display:block;">
+          <div id="content-body-people-mainpage" style=" margin-top:1px; height:344px; width:300px; margin-left:10px; overflow:auto;" class="reset-container">			
+	            <div class="ui-row-defaultPeople spaced invite" id="invitePeople-button-container">
+						<a id="addPeople" href="#" class="addPeople"></a>
+						<div id="inviteTxt" class="ui-row-contentPeople">
+							<a id="InvitePeopleTxt" href="#" class="primary-link-People">Invite</a>
+						</div>
+					</div> <!-- Invite Row Ends -->
+					
+					<div class="invite-containerPeople " id="invite-content" style="display: none; ">
+                          <div style=" width:270px; margin-left:20px; margin-top:3px;  padding-bottom:7px;">
+							<div style="margin:0;padding:0;display:inline">
+								<input name="utf8" type="hidden" value="">
+								<input name="authenticity_token" type="hidden" value="">
+							</div>
+							<span>Email: </span>
+							<input class="enabled" id="friends_request_email" name="emails" type="text" value="">
+							<a href="#"  id='people_email_invite_button' class="button-gray" style="display: inline-block;">Invite</a>
+							<div id='email_success_message' style='width: 196px; font-family: Arial; color: #666; font-size: 10px; padding-top: 4px; padding-left: 27px; margin-bottom:-2px; display:none;'>email sent successfully.</div>
+                          </div>
+						<span></span>
+					</div>
+					
+										
+					<!-- body (invites starts) -->
+					<div id="content-body-view" class="reset-container">
+					<p class="seperator click r">
+						<a href="#" id="minus-sign" class="minus"></a>
+						<span style="margin-left:23px;">FRIEND REQUESTS</span>
+					</p>
+					
+				
+<div class="requests_container" id="request-container"  style="display:block;">
+	
+</div>
+
+<p class="seperator click s">
+	<a href="#" class="minus" id="minus-sign-sent" ></a>
+	<span style="margin-left:22px;">SENT REQUESTS</span>
+</p>
+<div class="sent_requests_container" id="sent-container" style="display:block;">
+	<div class="ui-row-default spaced" id="my_sent_requests" style='display:block'>
+		<div class="ui-row-content with_btn">
+			<a href="#" class="primary-link l2" onClick="showMemberProfile(this,'screen_people');"> 
+			<img alt="Avatar" class="main" src="http://profiles.covucdn.s3.amazonaws.com/44454641554c54/avatar.png?1328783772"> <span>Name: </span>
+			<span class='people_name' value=''></span> <br>
+			<span>Flimby ID: </span><span class='people_name' value=''></span>
+			</a>
+			<div class="content-right">
+				<a href="#" class="button-gray" onClick="breakup(52, this);" style="margin-left:10px;">Cancel</a>
+			</div>
+		</div>
+	</div>
+		
+</div>
+
+<p class="seperator click f">
+	<a href="#" class="minus" id="minus-sign-friends"></a>
+	<span style="margin-left:17px;">FRIENDS</span>
+</p>
+<div class="friends_container"  id="your-friends-container"  style="display:block;">
+
+	
+		
+	</div>
+		
+
+</div>
+
+<!-- search Area starts -->
+				<div id="search-content-body-view" class="reset-container"  style="display:none;">
+
+					<p class="seperator-group click r">
+	
+	<span style="margin-left:11px;">SEARCH RESULTS</span>
+	
+					
+		<div class="ui-row-default spaced" id='member-search-result' style='display:none;'>
+			<div class="ui-row-content with_btn">
+				<a href="#" class="primary-link l2" > <img alt="Avatar" class="main" src="http://profiles.covucdn.s3.amazonaws.com/44454641554c54/avatar.png?1328783772"> <span class="name">Name: </span><span class='people_name' value=''></span> <br><span class="flimbyID">Flimby ID: </span><span class='people_name' value=''></span></a>
+				<div class="content-right">
+					<a href="#" class="button-gray-follow"  style="display:none; margin-left:20px;">Connect</a>
+					 <img alt="Loading_spinner" class="loading-spinner" style='top:5px; right:30px;'  src="img/loading_spinner.gif" />
+					<span class='span_label' style="margin-left:18px; display:none;"/>
+				</div>
+			</div>
+		</div>
+</p>
+<div class="requests_container" id="member-search-container"    style="display:block;">
+	
+</div>
+
+
+		
+
+</div>
+
+					
+	      </div> <!-- Content Body Closed -->
+	 </div> <!-- Content-Container Ends -->
+	 
+	 
+	 
+	 <!-- Content Area Closed -->	
+		
+</div><!-- Main People Div Closed -->
+<!-- People Page Ends -->
+<!-- Groups Page Starts -->	
+		<div class="content" id="groups_page" style="display: block; height: 457px;">
+			<!--<iframe id="groups_content" class="loading" src="" width="100%" height="100%" frameborder="0">
+			</iframe>-->
+			
+			 <div id="top-content" class="search-incl">
+              <div class="streamHeader" style="margin-top:1px;"> 
+			   <div id="header-group" style="display:block">
+                 <div align="center" style="padding-top:14px; width:320px; height:50px; color:#FFFFFF; font-size:19px; font-weight:bold;">Groups</div>
+<div class="addgroupbutton" style="color:#FFFFFF; font-weight: normal; font-size: 21px; line-height: 21px; margin-right:0px; padding: 4px; height: 22px;"><span style="margin-left:7px; ">+</span></div>
+                  
+              </div>
+			  
+			<!-- Add Group Header -->
+			   <div id="add-groupHeader" style="display:none; text-align: right; margin-right: 2px; margin-top: 0px;">
+			    
+				<div style="position:absolute;  margin-top:13px; ">
+                     <span style="color: white; font-size: 18px; font-family:arial; font-weight:600; margin-left: 91px;">Create a Group</span>	
+
+			    </div>
+					
+			    <div id="groupBK" style="position:absolute; margin-top: 9px; margin-left:-5px; cursor: pointer;" >
+			        <span style="position:absolute; float:left; margin-left: -55px; margin-top: 8px; color: white; font-size: 13px; font-family:arial;font-weight: bold;">Groups</span>
+			
+			        <img style=" float:left; margin-left:9px; cursor: pointer;" src="img/back-button.png" />
+			    </div>
+				<div id="groupSave" style="background: url(img/header_button_action_blue.png); width:66px; height:32px; cursor:pointer; margin-left:248px; margin-left: 248px; margin-top: 10px; float: right; margin-right: 2px;" >
+				    <div style="width:25px; position:absolute; float:left; margin-left: 16px; margin-top: 7px; color: white; font-size: 13px; font-family:arial;font-weight: bold;">Save</div>
+			    <!--<img  src="img/header_button_action_blue.png" style="cursor: pointer; padding-right: 5px; margin-top: 9px "></img>-->
+				</div>
+          </div> <!-- Add Group Header Closed -->
+		  
+		  
+		  <!-- Detail Group Header -->
+			  <div id="Detail-groupHeader" style="display:none; text-align: right; margin-right: 2px; margin-top: 0px;">
+			    
+				<div id='detail_group_header_name' style="overflow:hidden; white-space:nowrap; text-overflow: ellipsis; color: white; font-size: 18px; font-family:arial; position:absolute; text-align: center;  margin-top:13px; width:100px; margin-left: 110px;">
+                     
+
+			    </div>
+					
+			    <div id="detailBK" style="position:absolute; margin-top: 10px; margin-left:-5px; cursor: pointer;">
+			        <span style="position:absolute; float:left; margin-left: -55px; margin-top: 7px; color: white; font-size: 13px; font-family:arial;font-weight: bold;">Groups</span>
+			
+			        <img style="float:left; margin-left:9px; cursor: pointer;" src="img/back-button.png" />
+			    </div>
+				
+				<div  id='edit_group_button' style="position:absolute; background: url(img/header_button_action_blue.png); width:66px; height:32px; display:none; cursor:pointer; margin-left:248px; margin-top:10px;" >
+				    <div style="width:25px;font-weight:bold; margin-left: 20px; margin-top: 7px; color: white; font-size: 13px; font-family:arial;">Edit</div>
+			    <!--<img  src="img/header_button_action_blue.png" style="cursor: pointer; padding-right: 5px; margin-top: 9px " ></img>-->
+				</div>
+				
+          </div> <!-- Detail Group Header Closed -->
+		  
+		  <!-- Edit Group Header -->
+			  <div id="Edit-groupHeader" style="display:none; text-align: right; margin-right: 2px; margin-top: 0px;">
+			    
+				<div id='edit_group_header_name' style="overflow:hidden; white-space:nowrap; text-overflow: ellipsis; color: white; font-size: 18px; font-family:arial; position:absolute; text-align: center;  margin-top:13px; width:100px; margin-left: 110px;">
+                     <!--<span id='edit_group_header_name' style="color: white; font-size: 18px; font-family:arial; font-weight:600; margin-left: 150px;">Test</span>	-->
+
+			    </div>
+					
+			    <div id="editBK" style="position:absolute; margin-top: 10px; margin-left:-5px; cursor: pointer;" >
+			        <span style="position:absolute; float:left; margin-left: -55px; margin-top: 7px; color: white; font-size: 13px; font-family:arial;font-weight: bold;">Groups</span>
+			
+			        <img style=" float:left; margin-left:9px; cursor: pointer;" src="img/back-button.png" />
+			    </div>
+				
+				
+				
+				
+				<div id="groupUpdt" style="cursor:pointer; padding-right:0px; margin-top:0px; margin-right:-2px;"  >
+				    <span style="position:absolute; margin-left: 16px; margin-top: 16px; color: white; font-size: 13px; font-family:arial; font-weight:bold;">Save</span>
+			    <img  src="img/header_button_action_blue.png" style="cursor: pointer; padding-right: 6px; margin-top: 10px "></img>
+				</div>
+				
+          </div> <!-- Edit Group Header Closed -->
+		  
+		  
+		  <!-- Group Search Page Header -->
+			  <div id="Search-page-groupHeader" style="display:none; text-align: right; margin-right: 2px; margin-top: 0px;">
+			    
+				<div style="position:absolute;  margin-top:15px; margin-left:-17px;">
+                     <span style="color: white; font-size: 18px; font-family:arial; font-weight:600; margin-left: 150px;">Search</span>	
+
+			    </div>
+					
+			    <div id="searchBK" style="position:absolute; margin-top: 10px; margin-left:-5px; cursor: pointer;" >
+			        <span style="position:absolute; float:left; margin-left: -55px; margin-top: 8px; color: white; font-size: 13px; font-family:arial;font-weight: bold;">Groups</span>
+			
+			        <img style=" float:left; margin-left:9px; cursor: pointer;" src="img/back-button.png" />
+			    </div>
+				
+          </div> <!-- Group Search Page Header Closed -->
+			  
+              </div> <!-- header closed -->
+         <!-- Search Container -->
+
+           <!-- search box -->
+        <div id="group-searchfield" style="display:block; background-image: url(img/conversation_bk.png); width: 320px; height: 32px; position: relative;">
+         <div>
+             <table width="95%" align="center"style= "position: relative;">
+                <tr>
+                    <td>
+					    <div style=" width: 179px;">
+					      <!-- <img src='img/search_refresh.png' style="height: 24px; width: 37px; cursor: pointer;" />-->
+					       <div style=" width:272px; height: 24px; z-index: 999999; position: absolute;  top: 3px; background: url('img/full_search_field.png'); background-size: 272px 24px;">
+					          <img src="img/history.png" style="cursor:pointer; display: block; z-index: 999998; position: absolute; right: 4px; top: 2px; " ></img>
+					          <input type="text" placeholder="Search for Group"  id='search_group' style="z-index: 999997; position: absolute; top:1px;  right:35px; border:none; width: 228px; outline: none;" /> 
+					       </div>
+					   </div>
+			      </td>
+				    
+                  <td style="padding-left: 20px; padding-top: 12px;">
+					 <img src="img/search_magnify_button.png" id='group_get_search_results_button' style="cursor: pointer;  width: 20px; height: 20px; position:absolute; margin-left:-7px; margin-top:-9px;" />
+				  </td>                    
+              </tr>
+          </table>
+					
+	<!-- drop down box for seeing your most recent search history -->
+			<!--	<div  style="position: absolute; right: 75px; top: 3px; height: 240px; width: 199px; display: none;z-index: 999997;">
+					<div id="background"style="background-image: url(img/recent_dropdown_bk.png); width: 237px; height: 240px;">
+					
+						<!--img src="img/close_dropdown.png" style="cursor:pointer; position: absolute; top: 216px; right; " onclick="toogleAddMedia();" /-->
+					<!--</div>
+					<div style=" position: absolute; top: 30px; width: 237px; height: 188px; overflow-y:scroll; overflow-x:none;" >
+					</div>
+				</div> -->
+            </div>
+        </div>
+		
+	 <!-- search box End -->
+
+							
+	
+<!-- Group Content start -->
+	
+                <div class="ui-row-default spaced" id="group_search_1" style='display:none;'>
+                    <div class="ui-row-content with_btn">
+                        <a href="#" class="primary-link l2">
+                            <img alt="Avatar" class="main" src="http://profiles.covucdn.s3.amazonaws.com/44454641554c54/avatar.png">
+                            <span>Name:  </span>
+							<span class='people_name' >defgh</span><br>
+							<span>Flimby ID: </span>
+                            <span class='people_name'>abc123</span>
+                        </a>
+                        <div class="content-right">
+                            <a href="#" class="button-gray" style="margin-left:20px;"><input id="group_id" name="group_id" type="hidden" value="54">Connect</a>
+                            <label  class ='people_name' style="display: none; margin-left:10px;">Connected</label>
+                            <img alt="Loading_spinner" class="loading-spinner" style='top:5px; left:27px; right:30px;' src="img/loading_spinner.gif">
+                        </div>
+                    </div>
+                </div>
+<!-- Search Page Starts -->
+<!--<div id="content-container-searchpage" class="constrain-371 search-incl" style="float:left; background: url(img/background.png); overflow:auto; height:374px; margin-top:0px; width:320px; display:none;">
+    <div id="content-body-searchpage" class="reset-container">-->
+<div id="content-container-searchpage" class="constrain-371 search-incl" style="float:left; background: url(img/background.png); height:376px; margin-bottom:0px; width:320px; display:block;">
+    <div id="content-body-searchpage" style=" margin-top:0px; height:361px; overflow:auto;" class="reset-container">
+       
+		 <p class="seperator-group-search click r" style="margin-top:17px;">
+			
+			<span style="margin-left:7px;" >SEARCH RESULTS </span>
+       </p>
+
+
+				<div id='group_search_container'  style='height: 320px;'>
+				</div>
+				
+    </div>
+</div>
+<!-- Search Page Ends -->	
+			
+<div id="content-containergroup" class="constrain-371 search-incl" style="float:left; background: url(img/background.png); height:376px; margin-bottom:0px; width:320px; display:block;">
+    <div id="content-body-grouppage" style=" margin-top:0px; height:345px; overflow:auto;" class="reset-container">
+
+               <p id="seperatorPrefGrp" class="seperator-group click r" >
+					<a href="#" id="minus-sign-perferredgroup" class="minus"></a>
+					<span class="minusPref" style="margin-left:20px;" >PREFERRED GROUP</span>
+				</p>
+			  <div class="ui-row-default spaced" style='display:none;' id="perfered_group_1">
+
+               <a href="#" class="star blue"></a>
+                <div class="ui-row-content with_star">
+                    <a href="#" class="primary-link">wahoffice (9)</a>
+                </div>
+            </div> 
+			<!--<div class="ui-row-default spaced" style='display:none;' id="perfered_group_1">
+
+                <a href="#" class="star blue" onClick="showScreen('screen_group_detail');"></a>
+                <div class="ui-row-content with_star">
+                    <a href="#"  onclick='groupController.showGroupDetails(this)'class="primary-link">wahoffice (9)</a>
+                </div>
+            </div>--> 
+			 
+			
+
+        <div id="group_perfered_container" class="perfered_container" style="display:block; margin-left:7px; margin-right:7px;">
+
+        </div>
+
+      <p id="seperatorMyGrp" class="seperator-group click r" >
+			<a href="#" id="minus-sign-mygroups" class="minus"></a>
+			<span class="minusMyGrp" style="margin-left:28px;">MY GROUPS</span>
+       </p>
+       
+	                       <div class="ui-row-default spaced" style='display:none;' id="my_group_1">
+                        <a href="#" class="star" onclick='groupController.setPreferredGroup(this);'></a>
+                        <img alt="Loading_spinner" class="loading-spinner" src="img/loading_spinner.gif" />
+                        <input id="group_covu_id" name="group_covu_id" type="hidden" value="56" />
+                        <div class="ui-row-content with_star">
+
+                            <a href="#" class="primary-link">chachag (1)</a>
+                        </div>
+                    </div>
+	   
+
+        <div class="my_groups_container" id="my_groups_container" style="margin-left:7px; margin-right:7px;">
+
+        </div>
+
+
+         <p id="seperatorJoined" class="seperator-group click r" >
+			<a href="#" id="minus-sign-joinedgroup" class="minus" ></a>
+			<span class="minusJoined" style="margin-left:20px;" >JOINED GROUPS</span>
+       </p>
+		        <div class="ui-row-default spaced" style='display:none;' id="joined_group_1">
+                        <a href="#" class="star"></a>
+                        <img alt="Loading_spinner" class="loading-spinner" src="img/loading_spinner.gif" />
+                        <input id="group_covu_id" name="group_covu_id" type="hidden" value="8" />
+                        <div class="ui-row-content with_btn">
+                            <a href="#" class="primary-link">check (5)</a>
+                            <div class="content-right">
+								<img alt="Loading_spinner" class="loading-spinner" style='top:5px; right:20px;' src="img/loading_spinner.gif" />
+                                <a href="#" class="button-gray" style="margin-left:20px;">Leave<input id="group_id" name="group_id" type="hidden" value="8" /></a>
+                            </div>
+                        </div>
+                    </div>
+		
+
+        <div class="joined_container" id="joined_container"  style="margin-left:7px; margin-right:7px;">
+
+		
+					
+        </div>
+   </div>
+</div>
+			
+
+<!-- Add New Group Page Starts -->
+
+<div id="content-container-group" style="float:left; background: url(img/background.png); height:408px; width:320px;  display:none;">
+    <div id="content-body-addgrouppage"  style=" margin-top:0px; height:343px;" class="reset-container" >
+        <form accept-charset="UTF-8" action="/mobile/groups/new" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="JjWYrSZqthznUD/6DVFuJaMB4GLVvLCwlQ4wVHyeh58=" /></div>
+        <table>
+            <tr>
+
+                <td><label for="covu_id"><span style="color:#999999; font-size:15px;">ID </span></label></td>
+                <td><input class="ui-covu_id" id="create_group_covu_id" name="covu_id" type="text" value="" /></td>
+            </tr>
+			<tr>
+			<td></td>
+			<td style="height:10px;">
+			
+			
+			<div id="group-warnings" style="height:10px; text-align: center;">
+			   
+			  <div class="notify" id="warning_wait_group" style="position:absolute; top:43px; left:125px;">Check Availabilty <img src="img/spinny_wait.gif"/></div>
+			   
+			   <div class="warning" id="warning_allowCharacters_group" style="text-align: left;">Allowed characters: "a-z" "0-9" "_" "-"               </div>
+			   
+			   <div class="warning" id="warning_allowCharacters1_group" style="text-align: left;">Character must be alphanumeric       </div>
+			   
+			   <div class="warning" id="warning_lengthCharacters_group" style="text-align: left;">Your ID must be 3 to 32 characters long               </div>
+			   
+			   <div class="warning" id="warning_notAvailable_group">Group not available</div>
+			  			   
+           </div>
+			</td>
+			</tr>
+			
+            <tr>
+                <td><label for="name"><span style="color:#999999; font-size:15px;">Title </span></label></td>
+                <td><input id="create_group_name" name="name" type="text" value="" class="ui-covu_title"  /></td>
+            </tr>
+			<tr>
+			<td></td>
+			<td style="height:10px;"><div style="height:10px; text-align: center;"></div> </td>
+			</tr>
+			
+            <tr>
+
+                <td style="vertical-align: top;"><label for="info"><span style="color:#999999; font-size:15px;">Info </span></label></td>
+                <td><textarea id="create_group_info" name="info" class="ui-covu_textarea"></textarea></td>
+            </tr>
+			<tr>
+			<td></td>
+			<td style="height:10px;"> </td>
+			</tr>
+        </table>
+        <img alt="Seperator" src="img/seperator.png?1330383995" style="margin-top:18px; margin-left:0px;"/>
+        <div align="center" style="padding-top:16px; width:320px; height:50px; color:#666666; font-size:18px;">Channel:</div>
+        
+<div id="select_dark" style="margin-top:-20px;">
+
+    <div id="selectValue" class="select_value" >
+        <span id='selected_network' name='covu'>The Flimby Channel</span>
+
+    </div>
+            <li value="258"  id='network_name' style="display:none;" name="covu" >The Flimby Channel</li>
+ <ul id="dropdownlist" class="dropdown up" style="display:none;">
+
+		
+			
+            
+    </ul>
+
+</div>
+
+<br/>
+<br/>
+        <table id="custom_field_group" class="network_nuskin" style="display: none;">
+            <tr>
+                <td style="text-align: left; color:#999999; font-size:15px;">Distributor ID:</td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input id="custom_field" name="custom_field" type="text" value="" class="ui-covu_title" />
+                </td>
+            </tr>
+        </table>
+<br/>
+</form>    
+</div>
+</div>		
+
+
+<!-- Add New Group Page Ends -->			
+
+<!-- Edit Group Page Starts -->
+
+<div id="content-container-editgroup" style="float:left; background: url(img/background.png); height:408px; width:320px;  display:none;">
+    <div id="content-body" >
+        <form accept-charset="UTF-8" action="/mobile/groups/new" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="JjWYrSZqthznUD/6DVFuJaMB4GLVvLCwlQ4wVHyeh58=" /></div>
+        <table>
+            <tr>
+
+                <td><label for="covu_id"><span style="color:#999999; font-size:15px;">ID </span></label></td>
+                <td><input class="ui-covu_id" id="edit_group_covu_id" readonly name="covu_id" type="text" value="" /></td>
+            </tr>
+			<tr>
+			<td style="height:10px;"> </td>
+			</tr>
+			
+            <tr>
+                <td><label for="name"><span style="color:#999999; font-size:15px;">Title </span></label></td>
+                <td><input id="edit_group_name" name="name" type="text" value="" class="ui-covu_title" /></td>
+            </tr>
+		   
+		   <tr>
+			<td style="height:10px;"> </td>
+			</tr>
+		   
+            <tr>
+
+                <td style="vertical-align: top;"><label for="info"><span style="color:#999999; font-size:15px;">Info </span></label></td>
+                <td><textarea id="edit_group_info" name="info" class="ui-covu_textarea"></textarea></td>
+            </tr>
+			
+			<tr>
+			<td style="height:10px;"> </td>
+			</tr>
+			
+        </table>
+        <img alt="Seperator" src="img/seperator.png?1330383995" style="margin-top:0px; margin-left:0px;"/>
+        <div align="center" style="padding-top:16px; width:320px; height:50px; color:#666666; font-size:18px;">Channel:</div>
+        
+<div id="select_dark_editgroup" style="margin-top:-20px;">
+
+    <div id="selectValueEdit" class="select_value" >
+        <span id='selected_edit_network' name='covu'>The Flimby Channel</span>
+
+    </div>
+	
+            <li value="258"  id='edit_network_name' style="display:none;" name="covu">The Flimby Channel</li>
+			
+			
+ <ul id="dropdownlist_editgroup" class="dropdown up" style="display:none;">
+
+		
+			
+            
+    </ul>
+
+</div>
+<img alt="Seperator" src="img/seperator.png?1330383995" style="margin-top:14px; margin-left:0px;"/>
+			<div  id='remove_group_button' style="cursor:pointer; background: url(img/button_blue_big.png); height:29px; width:126px; margin-top: -3px; margin-left: 88px;">
+			   <div id="removeTxt" style="color:white; padding-top: 5px; margin-left: 1px; margin-top: 14px;"> Remove Group </div>
+			</div>
+<br/>
+<br/>
+        <table id="custom_field_group" class="network_nuskin" style="display: none;">
+            <tr>
+                <td style="text-align: left; color:#999999; font-size:15px;">Distributor ID:</td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input id="custom_field_edit_group" name="custom_field" type="text" value="" class="ui-covu_title" />
+                </td>
+            </tr>
+        </table>
+<br/>
+</form>    
+</div>
+</div>		
+
+
+<!-- Edit Group Page Ends -->	
+
+<!-- Detail Group Page Starts -->
+<div id="content-container-groupdetail" class="constrain-404" style="float:left; background: url(img/background.png); margin-top:-2px; height:410px; width:320px;  display:none;">
+    <div id="content-body-groupdetail" class="reset-container" style="margin-top:0px; height:385px;">
+
+        <!-- Invite Container -->
+<div id="InviteContentGrp" style="display:none;" class="ui-row-default spaced invite" >
+    <a href="#" class="add"></a>
+    <div class="ui-row-content-invite">
+        <a href="#" class="primary-link-invite">Invite</a>
+    </div>
+</div>
+				<div class="invite-container " id="invite-content-group" style="display: none; " onKeyPress="triggetClickOn('group_email_invite_button');"   >
+                        <div style=" width:270px; margin-left:20px; margin-top:3px;  padding-bottom:7px;">
+							<div style="margin:0;padding:0;display:inline">
+								<input name="utf8" type="hidden" value="">
+								<input name="authenticity_token" type="hidden" value="">
+							</div>
+							<span>Email: </span>
+							<input  id='group_email_invite_input' style="outline:none; color:black;" class="enabled" name="emails" type="text" value="">
+							<a href="#" id='group_email_invite_button' class="button-gray" style="display: inline-block;">Invite</a>
+					<div id='group_email_success_message' style='width: 196px; font-family: Arial; color: #666; font-size: 10px; padding-top: 4px; padding-left: 27px; margin-bottom:-2px; display:none;'>email sent successfully.</div>
+                          
+						<span></span>
+						</div>
+					</div>
+
+
+<p id="sepratorGrpDetailAdmin" class="seperator-group click r" >
+					<a href="#" class="minus" id='minus-sign-admin-groups'></a>
+					<span class="adminTxt" style="margin-left:20px;">ADMIN</span>
+				</p>
+
+      		
+		     <div class="ui-row-default spaced"  style='display:none;'id="group_member_admin_1">
+                <div class="ui-row-content">
+                    <a href="#" class="primary-link l2" >
+                        <img alt="Thumb_baba" class="main" src="http://profiles.covucdn.s3.amazonaws.com/646576736572766572/6d656d62657273/thumb_baba.png?1330608561">
+                        <span>Name: Bab, Bab</span><br>
+                        <span>Flimby ID: baba</span>
+                    </a>
+                </div>
+            </div>
+        <div class="admin_container" id="Admin_detail_group" style="display: block; ">
+
+        </div>
+
+        
+		<p class="seperator-group click r" id="MemberTxt" >
+					<a href="#" class="minus" id='minus-sign-member-groups'></a>
+					<span style="margin-left:20px;" >Members</span>
+				</p>
+		
+		        <div class="ui-row-default spaced" id="group_member_1" style='display:none;'>
+                            <div class="ui-row-content ">
+                                <a href="#" class="primary-link l2">
+                                    <img alt="Thumb_nabeel1" class="main" src="http://profiles.covucdn.s3.amazonaws.com/646576736572766572/6d656d62657273/thumb_nabeel1.png?1330608562">
+                                    <div class="name" style="width: 41px; float: left;">Name:  </div>
+									<div class='people_name'>Azam, Nabeel</div>
+									 <div class="flimbyID" style="width: 52px; float: left;">Flimby ID: </div>
+                                    <div class='people_name' style="padding-left:4px;"> Flimby ID: nabeel1</div>
+									
+                                </a>
+								<div class="content-right">
+				<a href="#" class="button-gray" style="display:none; margin-left:20px;" >Remove</a>
+				<img alt="Loading_spinner" class="loading-spinner" style='top:5px; right:20px;' src="img/loading_spinner.gif" />
+			</div>
+                            </div>
+							
+                 </div>
+        <div class="members_container" id="Member_detail_group" style="display: block; ">
+
+
+      </div>
+    </div>
+</div>
+<!-- Detail Group Page Ends -->			
+			
+			
+			
+			</div> <!-- id="top-content ends"-->
+			
+		</div> <!-- groups-page div ends-->
+
+<!-- Groups Page Ends -->
+
+
+
+		<!-- <div class="content" id="dashboard_page" style="display: none;  height: 457px;">
+			<iframe id="dashboard_content" class="loading" src="" onchange="checkIframe()" width="100%" height="100%" frameborder="0">
+			</iframe>
+		</div> -->
+				<!-- Profile Page Starts -->		
+		<div class="content" id="friend_profile_page" style="display: none;  height: 457px;">
+
+			<div class="streamHeader" style="margin-top:1px;">
+		<div  id='friend_profile_back_button' class="back_button" >
+				<div style=" margin-top:7px; margin-left:20px; font-size:13px; color:#FFFFFF;" >Back</div>
+			</div>
+				<div style="margin-left:50px;float:left;"><div style="margin-top:14px; color:#FFFFFF; font-size:19px; font-weight:bold;">Profile</div></div>  
+				
+		</div>	
+			
+	<div class="content" style='float:left; background: url(img/background.png); height:408px; width:320px;'>
+			<div class="profile-background-img" style="float:left;">
+				<img src="img/dp_large.png" width="78" height="78" id="friend_avt" style="padding-left:10px; padding-top:10px;"></img>
+			</div>
+			<div style="float:left; padding-top:33px; padding-left:42px;">
+			
+					<div style="font-size:13px; font-weight:900;">
+						Name: <span id='friend_profile_user_name' class="pro_font"> ok</span><br/>
+					</div>
+					<div style="margin-top:7px; font-size:13px; font-weight:900;">			
+						Email: <span id='friend_profile_email_id' class="pro_font">ok</span><br/>
+					</div>
+					<div style="margin-top:7px; font-size:13px; font-weight:900;">
+						Flimby ID: <span id='friend_profile_covu_id' class="pro_font">ok</span><br/>
+					</div>
+					<div style="margin-top:7px; font-size:13px; font-weight:900;">
+						Location: <span id='friend_profile_location' class="pro_font">ok</span><br/>
+					</div>
+					<div style="margin-top:7px; font-size:13px; font-weight:900;">
+						Phone Number: <span id='friend_profile_phone_number' class="pro_font">ok</span><br/>
+					</div>
+			</div>
+	</div>
+		</div>
+<!-- Profile Page Ends -->
+		
+		<!-- Profile Page Starts -->		
+		<div class="content" id="profile_page" style="display: none;  height: 457px;">
+			<iframe id="profile_content" class="loading" style='display:none;' src="" onchange="checkIframe()" width="100%" height="100%" frameborder="0">
+			</iframe>
+			<div class="streamHeader" style="margin-top:1px;">
+			
+				<div style="margin-left:114px;float:left;"><div style="margin-top:14px; color:#FFFFFF; font-size:19px; font-weight:bold;">My Profile</div></div>  
+				<div id="editPro" class="button_blue" align="center" style="cursor:pointer;" ><div style=" margin-top:8px; font-size:14px; color:#FFFFFF;">Edit</div></div>
+				
+		</div>	
+			
+	<div class="content" style='float:left; background: url(img/background.png); height:408px; width:320px;'>
+			<div class="profile-background-img" style="float:left;">
+				<img src="img/dp_large.png" width="78" height="78" id="avt" style="padding-left:10px; padding-top:10px;"></img>
+			</div>
+			<div style="float:left; padding-top:33px; padding-left:42px;">
+			
+					<div style="font-size:13px; font-weight:900;">
+						Name: <span id='profile_user_name' class="pro_font"> ok</span><br/>
+					</div>
+					<div style="margin-top:7px; font-size:13px; font-weight:900;">			
+						Email: <span id='profile_email_id' class="pro_font">ok</span><br/>
+					</div>
+					<div style="margin-top:7px; font-size:13px; font-weight:900;">
+						Flimby ID: <span id='profile_covu_id' class="pro_font">ok</span><br/>
+					</div>
+					<div style="margin-top:7px; font-size:13px; font-weight:900;">
+						Location: <span id='profile_location' class="pro_font">ok</span><br/>
+					</div>
+					<div style="margin-top:7px; font-size:13px; font-weight:900;">
+						Phone Number: <span id='profile_phone_number' class="pro_font">ok</span><br/>
+					</div>
+			</div>
+	</div>
+		</div>
+<!-- Profile Page Ends -->
+
+<!--   Edit Profile page---->
+
+<div class="content" id="edit_profile" style="display: none;  height: 457px;">
+
+	<div class="streamHeader" style="margin-top:1px;">
+			<div id="editProBK" class="back_button" >
+				<div style=" margin-top:7px; margin-left:9px; font-size:13px; color:#FFFFFF;" >My Profile</div>
+			</div>	
+			  
+			<div id="savePro" class="button_blue" align="center" style="cursor:pointer;" >
+				<div style=" margin-top:8px; font-size:14px; color:#FFFFFF;">Save</div>
+			</div>
+	</div>
+	<div class="content" style='background-image: url(img/background.png); float:left; overflow-y:auto; overflow-x:hidden; height:408px;'>
+			<div class="profile-background-img" style="float:left;" id="avatar">
+				<img src="img/dp_large.png" width="78" height="78" id="edit_avt" style="padding-left:10px; padding-top:10px;"></img>
+			</div>
+			<form id='profile_form'  method="post" enctype="multipart/form-data">
+	<!-- Choose avatar-->
+		
+			<div class="chose_avatar" id="choose" >
+				<div style="width:245px; height:24px; float:left; background-image:url(img/textfield_choosefile.png);">
+					<input type="file"   id='profile_file' name='avatar' style="outline:none; border:none; opacity:0; width:280px; " ></input>
+					<input type="text"  id='file_path' style=" outline:none; border:none;  margin-top:-25px;  margin-left:80px;width:158px; height:21px; " ></input>
+					
+				</div>
+					
+			</div>
+	<!--End Choose Avatar-->
+	
+			<div class="chose_file" style="margin-top:20px;">
+				<input  name='first_name'  type="text" id='edit_profile_f_name' placeholder="First Name" style=" margin-left:5px;  outline:none; border:none; width:238px;"  ></input>	
+			</div>
+			
+			<div class="chose_file" style="margin-top:20px;">
+				<input name='last_name' type="text" id="edit_profile_l_name" placeholder="Last Name" style=" margin-left:5px; outline:none; border:none; width:238px;"  ></input>
+			</div>
+			
+			<div class="chose_fileRead" style="margin-top:20px;">
+				<input type="text" id='edit_profile_email_id' placeholder="Email" readonly style="background:none; margin-left:5px; outline:none; border:none; width:238px;"  ></input>
+			</div>
+			
+			<div class="chose_fileRead" style="margin-top:20px;">
+				<input type="text" readonly id="edit_profile_location" placeholder="Location" style=" background:none; margin-left:5px; outline:none; border:none; width:238px;"  ></input>
+				
+			</div> 
+			
+			<div class="chose_file" style="margin-top:20px;">
+			
+				<input type="text" name='phone' id="edit_profile_phone_number" placeholder="Phone Number..." style=" margin-left:5px; outline:none; border:none; width:238px;" ></input>
+				
+			</div>
+			
+			<input name='login_session_key' id='profile_login_key' type='hidden' style='dispaly:none'/>
+			<div style="height: 15px; display:none;" id="profile_phone_null_check"> 
+			        <div style="position:absolute; top:370px; left:42px; font-size: 11px; color: #FF0000; font-weight: bold;">Enter the Phone Number</div>             
+			   </div>
+			<div style="height: 15px; display:none;" id="profile_warning_phone_number"> 
+			        <div style="position:absolute; top:370px; left:42px; font-size: 11px; color: #FF0000; font-weight: bold;" >Invalid Phone Number</div>             
+			   </div>
+			   <div style="height: 15px; display:none;" id="profile_warning_valid_phone_number"> 
+			        <div style="position:absolute; top:370px; left:42px; font-size: 11px; color: #006600; font-weight: bold;" >Valid Phone Number</div>             
+			   </div>
+			   
+			<!-------change password button------>
+			
+			<div id="change_pass" style="margin-top:7px;" >
+				<div style=" margin-top:6px; margin-left:4px; font-size:14px; color:#FFFFFF;">Change Password</div>
+			</div> 
+			
+			<!-------change password button end------>
+							
+							
+			<!-------cancel password button------>
+			<div id="cancel_pass" style="display:none" >
+				
+				<div id="changePassCancel" class="change_pass_cancel" >
+					<div style=" margin-top:6px; margin-left:20px; font-size:14px; color:#FFFFFF;">Cancel</div>
+				</div>
+			<!-------cancel password button End------>
+			
+			
+				<div class="chose_file" style="margin-top:20px;">
+					<input type="password" name="current_password" placeholder="Current Password" style="margin-left:5px; outline:none; border:none; width:238px;"></input>
+			</div>
+			
+			<div style="margin-left:20px;" ><img src="img/separator_hr.png" style="padding-top:20px;" />
+			</div>
+			
+			<div class="chose_file" style="margin-top:20px;">
+				<input type="password" name="new_password" placeholder="New Password" style=" margin-left:5px; outline:none; border:none; width:238px;"  ></input>
+			</div>
+			
+			<div class="chose_file" style="margin-top:20px; margin-bottom:20px;">
+					<input type="password" name="confirm_new_password" placeholder="Confirm Password" style=" margin-left:5px; outline:none; border:none; width:238px;"  ></input>
+
+			</div>
+				
+			
+			</div></form>
+				
+	
+	</div>
+	
+	
+</div>
+
+
+<!--   Edit Profile Page Ends---->
+
+<!-----Dashboard Page Starts----->
+<div id="dashboard_page" class="content"  style="display: none; height: 457px;">
+	<div id="dashboard_page_header" class="streamHeader">
+		<span style="margin:13px 105px; color: white; font-size: 20px; font-family:arial;font-weight: bold; position: absolute;">Dashboard</span>
+				<div  id='admin_button' class="button_blue" align="center" style="cursor:pointer; margin-right:8px;" >
+					<div style=" margin-top:8px; font-size:14px; color:#FFFFFF;">Admin</div>
+				</div>
+
+	</div>
+	<div style=" background:url(img/background.png); height:406px; width:320px; overflow-x: hidden; overflow-y: scroll;">
+        <div id="member_container">
+            <p class="seperator click r">
+                <a href="#" id="member_minus_sign" class="minus" style="margin-top:1px;" ></a>
+                <span style="margin-left: 100px;">MEMBER DASHBOARD</span>
+                <span style="margin:0 0 0 125px;">My Friends:</span>
+            </p>
+            <div id="member_container_rows" >
+                
+            </div>
+            
+        </div>
+        
+        <div id="groups_container">
+            <p class="seperator click r">
+                <a href="#" id="group_minus_sign" class="minus" ></a>
+                <span style="margin: 0 0 0 126px;">My Groups:</span>
+            </p>
+            <div id="group_container_rows" >
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------Dashboard Page Ends----->	
+
+<!-- Help Page Starts -->		
+<!--<div class="content" id="help_page" style="display: none;  height: 457px;">
+
+	<div id="dashboard_page_header" class="streamHeader">
+		<span style="margin:13px 105px; color: white; font-size: 20px; font-family:arial;font-weight: bold; position: absolute;">Help</span>
+		
+	</div>
+	<!--<iframe id="help_content"  class="loading" src="" onchange="checkIframe()" width="100%" height="100%" frameborder="0">
+	</iframe>
+</div>-->
+
+
+
+
+<div class="content" id="help_page" style="display: none;  height: 457px;">
+			
+		<div class="streamHeader" style="margin-top:1px;">
+			
+				<div style="margin-left:139px;float:left;"><div style="margin-top:14px; color:#FFFFFF; font-size:19px; font-weight:bold;">Help</div></div>  
+				
+				
+		</div>	
+			
+	<div class="content" style='float:left; background: url(img/background.png); height:408px; width:320px;'>
+		
+			<div id="help_email" style="width:178px; cursor:pointer; color:rgb(33,181,229); font-size: 16px; position:absolute; top:196px; left:68px;">
+				<span> <img src="img/email.png" style="" /> </span>
+				<span style="vertical-align: top; margin-top: 6px; display: inline-block; text-decoration: underline;">support@flimby.com</span>
+			</div>
+			<div id="help_phone" style="width:136px; color:rgb(33,181,229); font-size: 16px; position:absolute; top: 236px; left: 71px;">
+				<span> <img src="img/phone.png" style="" /> </span>
+				<span style="vertical-align: top; margin-top: 6px; display: inline-block; text-decoration: underline;">801-221-1800</span>
+			</div>
+			
+			<img  src='img/text_poweredby.png' style='position: absolute; top: 397px; left:129px; width: 54px;height:12px' />
+			<img  src='img/logo_optini.png' style='position: absolute; top: 415px; left:105px; width: 98px;height:16px' />
+			<img  src='img/text_copyright.png' style='position: absolute; top: 439px; left:129px; width: 50px;height:7px' />
+			
+			
+	</div>
+</div>
+
+
+<!-- Help Page Ends -->
+		
+	</div>
+	
+<!-- Settings Page starts -->	
+<div id='configuration_page' style="display: none;">
+	
+	<div class="streamHeader" >  
+	     <div style="text-align: right; margin-right: 2px; margin-top: 1px;">
+			  
+			  <div style="position:absolute;  margin-top:13px; ">
+				  <span  style="color: white; font-size: 20px; font-family:arial;font-weight: bold; margin-left: 115px;">Settings</span>	
+		      </div>
+			  <img id="logOutBtn"   src="img/Logout.png" style="cursor: pointer; padding-right: 5px; margin-top: 10px "></img>
+	     </div>
+    </div> <!-- Header Ends -->
+	
+	<div class="content" style=' background: url(img/background.png); height:408px; '>
+		 <div id="privacy_content">
+			 <input type=CHECKBOX id="privat_profile" style='margin-left: 20px; margin-top : 30px;' >
+			 <label for="privat_profile" style='position:absolute; font-size:14px; font-weight: bold; margin-top:29px; padding-left: 5px;' > Make My Profile Private </label>
+			 <p style="padding-left: 40px; font-size:12px;" >-Your Flimby ID and associated         Email Address <br/>  will not be searchable. 
+				<br />
+						-You must add/accept invitations through <br/>emails.</p>
+						<br />
+			<input type=CHECKBOX id="alert_sound" style='margin-left: 20px; ' >
+			<label for="alert_sound" style='position:absolute; font-size:14px; font-weight: bold; margin-top:1px; padding-left: 5px;' > Blasts Alert Sound </label>
+			<img id="infoIcon" src="img/settings_info_icon.png" style='cursor: pointer; margin-top: 205px; margin-right: 18px; float:right;' />
+		</div>
+		
+		<div id="save_privacy" style='display:none'>
+			<img style='padding-top: 50px;' src="img/spinny.gif"/>
+		</div>
+	</div>
+</div>
+<!-- Settings Page Ends -->
+
+<!-- Info Page starts -->	
+<div id='info_page' style="display: none;">
+	<div class="streamHeader" style="margin-top:-1px;" >  
+		<div style="text-align: right; margin-right: 2px; margin-top: 2px;">
+			
+			<div style="position:absolute;  margin-top:13px; margin-left: 140px; ">
+				<span  style="color: white; font-size: 20px; font-family:arial;font-weight: bold; ">Info</span>	
+		    </div>
+			<div id="infoBK" style="position:absolute; margin-top: 10px; cursor: pointer;" >
+				<span style="position:absolute; float:left; margin-left: -45px; margin-top: 7px; color: white; font-size: 13px; font-family:arial;font-weight: bold;">Back </span>
+			
+				<img style=" float:left; margin-left:6px; cursor: pointer;" src="img/back-button.png" />
+			</div>
+	        <img id="infoLogOut"  src="img/Logout.png" style="cursor: pointer; padding-right: 5px; margin-top: 10px " ></img>
+		</div>
+	</div>	
+	<div class="content" style=' background: url(img/background.png); height:408px;'>
+	    <img src="img/logo_big_blue.png" style='position: relative; top: 39px; left:75px; width: 170px;height:100px'/>
+		<img  src='img/text_url.png' style='position: absolute; top: 210px; left:70px; width: 194px;height:33px' />
+		<div style='margin-top:115px'>
+			<center><span id='settings_app_version'style='font-size: 20px;'>v 1.0.0.0</span></center>
+		</div>
+		<img  src='img/text_poweredby.png' style='position: absolute; top: 397px; left:133px; width: 54px;height:12px' />
+		<img  src='img/logo_optini.png' style='position: absolute; top: 415px; left:111px; width: 98px;height:16px' />
+		<img  src='img/text_copyright.png' style='position: absolute; top: 439px; left:135px; width: 50px;height:7px' />
+	</div>
+</div>
+<!-- Info Page Ends -->
+
+<!-- Blast Page Starts -->	
+<div id="blast_page"  style="display: none;">
+	 <div class="streamHeader" id="streamHeader">  
+		  <div style="text-align: right; margin-right: 2px; margin-top: 2px;">
+			    
+				<div style="position:absolute;  margin-top:13px; ">
+                     <span id='blast_page_header' style="display: block; color: white; font-size: 20px; font-family:arial;font-weight: bold; margin-left: 137px;">Blast</span>	
+
+			    </div>
+					
+			    <div id="prevScreen" style="position:absolute; margin-top: 11px; margin-left:-1px; cursor: pointer;">
+			        <span style="position:absolute; float:left; margin-left: -55px; margin-top: 8px; color: white; font-size: 13px; font-family:arial;font-weight: bold;">Cancel </span>
+			
+			        <img style=" float:left; margin-left:9px; cursor: pointer;" src="img/blast_cancel_button.png"/>
+			    </div>
+			    <img id="blast_Button"  src="img/320x480_send_blast_button.png" style="cursor: pointer; padding-right: 5px; margin-top: 9px " ></img>
+          </div>
+    
+	</div> <!-- header close -->
+		
+	<div id="blastContent" class="create-blast" style='background: url(img/background.png); margin-top:0px;' >
+       <div id="blast_input" style="position:absolute;">
+		   <div class="ui-widget"> 
+			  <input id="to_box"  type="text" placeholder="To:" style="outline: none;width: 238px; height: 24px; border:none;"></input>
+	      </div>
+		 
+		 <textarea rows="6" spellcheck="true" id="message_input" style="margin-top:-5px; border:none; border-bottom:ridge; width: 316px; padding-left: 10pt; resize:none; font-size:17px; font-family:Arial, Helvetica, sans-serif; text-align:left; outline:none;margin-left: 2px;" placeholder="Type message here..."></textarea>
+	  </div>
+	  <div align='center' style='margin-top:205px; font-size:20px; color:#909090; font-weight:500; '>
+		   Add:<br >
+		   <span style="color:#B7B7BA; padding-right:10pt; letter-spacing: -1px; word-spacing:1px; " ><h6>(<i>choose one of the following</i>)</h6></span><br >
+	  </div>
+			<br>
+			<div   class="carousel" style='margin-top:-15px;'>
+				<div class="carousel-view" style='margin-left:0px;'>
+					<ul  class="slide-view">
+						<li><a href="#" id="link" title = "Create a bookmark blast." class="link-icon1" ></a></li>
+						<li><a href="#" id ="ppt" title = "Create a pdf blast." class="icon-button ppt-icon1" ></a></li>
+						<li><a href="#" name="audio" class="icon-button audio-icon"></a></li>					
+						<li><a href="#" name="image" class="icon-button picture-icon1"></a></li>
+					</ul>
+				</div>
+			</div>
+				<!-- <table align="center" style='position:absolute; top:5px; margin-left:91px;'>
+
+				<tr>
+
+					<td><img src="img/footer_live_text.png" alt="live"  /></td>
+
+					<td> <div style='margin-left:2px;'> <img src="img/footer_live_button_off.png" alt="off" id="b1" onclick='onLive()' onMouseOver="mouseOver()" onMouseOut="mouseOut()" /> </div></td>
+
+				</tr>
+
+			 </table> -->
+			<div id="bottom_content" style=" width: 293px; margin:10px 0 0 18px; display: block;">
+				<div id='link_bottom_content' style='display:none'>
+						<input  id='name_input' class="linkbox" name="Link" placeholder=" Link:" type="text" />
+
+						<input  id='url_input' class="linkbox" name="title" placeholder=" Title:" style='margin-top: 5px; ' type="text" />
+			    </div>
+		   </div>
+	</div>
+</div>
+<!-- Blast Page Ends -->	
+	
+<!-- main footer, version info. -->
+<!-- Main Footer Starts -->
+<div class="footer" id="homeFooter" style="float:left;">
+	<div id='footer_display' style='display:none; position:absolute; margin-top: -2px;'>
+		<img id="HomeFooter" src="img/footer-icon-home.png" style="position: absolute;  width:48px; height:48px; cursor:pointer; margin:0 0 10px 7px;" />
+		<img id="streamFooter" src="img/footer-icon-stream.png" style="position: absolute;  width: 48px; height: 48px; cursor:pointer; margin:0 0 10px 66px;" />
+        <img id="blastFooter" src="img/320x480_blast_button.png" style="position: absolute;  cursor:pointer; margin:-7px 0 10px 133px; width: 55px; height:55px; z-index:1;" />	
+        <img id="peopleFooter" src="img/footer-icon-people.png" style="position: absolute;  cursor:pointer; margin:0 0 10px 206px;" />
+		<img id="groupFooter" src="img/footer-icon-group.png" style="position: absolute; cursor:pointer; margin:0 0 10px 265px;" />
+	</div>
+</div>
+   <div class="blackLabelS" style="text-align: right;" name="versionInfo">Stage v1.0.51</div>
+</div>
+
+</body>
+	<script type="text/javascript" src="content/covu.popup.js"></script>
+		<script type="text/javascript" src="content/historyController.js"></script>
+		<script type="text/javascript" src="content/helper.js"></script>
+			<script type="text/javascript" src="content/screenManager.js"></script>
+				<script type="text/javascript" src="content/contentManager.js"></script>
+					<script type="text/javascript" src="content/blastManager.js"></script>
+					<script type="text/javascript" src="content/peopleController.js"></script>		
+						<script type="text/javascript" src="content/groupController.js"></script>
+			
+</html>
